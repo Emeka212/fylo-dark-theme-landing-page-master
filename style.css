@@ -1,0 +1,458 @@
+@import "https://fonts.google.com/specimen/Raleway";
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+a{color: inherit;text-decoration: none;}
+li{list-style: none;}
+.loader_wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: hsl(216, 53%, 9%);
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader_wrapper i{
+    font-size: 20px;
+}
+.loader_wrapper li{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    border-radius: 50px;
+    border:  2px solid #fff;
+    border-top: 2px solid red;
+    border-bottom: 2px solid green;
+    transform: rotate(360deg);
+    animation: slidein 1s infinite;
+}
+@keyframes slidein{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", Arial;
+    font-size: 14px;
+    background: hsl(218, 28%, 13%);
+    color: hsl(0, 0%, 100%);
+}
+header{
+    position: relative;
+    background: hsl(217, 28%, 15%);
+    padding: 20px 50px 70px;
+    overflow: hidden;
+}
+header:after{
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-size: cover;
+}
+header .nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav_bar .logo img{
+    width: 100px;
+}
+header .nav_bar .links{
+    display: flex;
+}
+header .nav_bar .links a{
+    margin: 0 15px;
+    color: #bcbcbc;
+}
+header .nav_bar .links a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+header .header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+header .header img{
+    width: 500px;
+    margin: 50px 0 20px;
+}
+header .header h1{
+    width: 600px;
+    font-size: 40px;
+    line-height: 55px;
+}
+header .header .sub_title{
+    width: 500px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: #bcbcbc;
+}
+header .header button{
+    padding: 15px 100px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 20px 0;
+    background: hsl(198, 60%, 50%);
+    transition: 0.5s;
+}
+header .header button:hover{
+    background: hsl(176, 68%, 64%) ;
+}
+/**/
+section{
+    /*background: red;*/
+    padding: 0 50px 50px;
+}
+/**/
+section .what_we_do{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+section .what_we_do .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    /*background: red;*/
+    margin: 20px 0;
+}
+section .what_we_do .card img{
+    margin: 10px 0 20px;
+}
+section .what_we_do .card b{
+    font-size: 15px;
+}
+section .what_we_do .card span{
+    width: 350px;
+    margin: 20px 0;
+    line-height: 25px;
+    font-size: 13px;
+    color: #bcbcbc;
+}
+/**/
+section .about_us{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section .about_us .img,
+section .about_us .about{
+    width: 45%;
+}
+section .about_us .img img{
+    width: 100%;
+}
+
+section .about_us .about h2{
+    font-size: 35px;
+    width: 300px;
+    line-height: 40px;
+}
+section .about_us .about span{
+    font-size: 13px;
+    line-height: 20px;
+    color: #bcbcbc;
+}
+section .about_us .about span a{
+    display: inline-flex;
+}
+section .about_us .about span a:hover{
+    text-decoration: underline;
+    color: hsl(198, 60%, 50%);
+}
+section .about_us .about span a img{
+    width: 20px;
+    margin-left: 5px;
+    display: none;
+}
+section .about_us .about span a:hover img{
+    display: block;
+}
+/**/
+section .comment{
+    position: relative;
+    padding: 30px 0;
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+section .comment .quote{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section .comment .card{
+    width: 350px;
+    margin: 10px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    position: relative;
+    background: hsl(219, 30%, 18%);
+}
+section .comment .card .txt{
+    margin: 0 0 20px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #bcbcbc;
+}
+section .comment .card .img_name{
+    display: flex;
+    align-items: center;
+}
+section .comment .card .img_name img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 10px 0 0;
+}
+section .comment .card .img_name .name{
+    display: flex;
+    flex-direction: column;
+}
+section .comment .card .img_name .name span{
+    font-size: 13px;
+    margin-top: 5px;
+    color: #bcbcbc;
+}
+/**/
+section .signup_conn{
+    width: 100%;
+    position: relative;
+    margin-bottom: -120px;
+}
+section .signup{
+    width: 60%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 50px;
+    background: hsl(217, 28%, 15%);
+}
+section .signup h2{
+    font-size: 40px;
+    margin: 10px 0;
+}
+section .signup span{
+    color: #bcbcbc;
+}
+section .signup form{
+    margin: 20px 0;
+}
+section .signup form input{
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    height: 40px;
+    margin: 5px 10px;
+}
+section .signup form input[type="text"]{
+    padding-left: 20px;
+    width: 65%;
+}
+section .signup form input[type="submit"]{
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #ffffff;
+    background: hsl(198, 60%, 50%);
+    transition: 0.5s;
+}
+section .signup form input[type="submit"]:hover{
+    background: hsl(176, 68%, 64%);
+}
+/**/
+footer{
+    padding: 100px 50px 5px;
+    background: hsl(216, 53%, 9%);
+}
+footer .footer_logo{
+    width: 100px;
+    margin-top: 20px;
+}
+footer .footer{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #bcbcbc;
+}
+footer .footer .row{
+    margin: 10px 0;
+}
+footer .footer .row img{
+    width: 20px;
+}
+/**/
+footer .footer .row_one{
+    display: flex;
+    align-items: flex-start;
+}
+footer .footer .row_one span{
+    margin-left: 20px;
+    line-height: 25px;
+    width: 300px;
+}
+/**/
+footer .footer .row_two{
+    display: flex;
+    flex-direction: column;
+}
+footer .footer .row_two a{
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px;
+}
+footer .footer .row_two a:hover{
+    color: #ffffff;
+}
+footer .footer .row_two a img{
+    margin-right: 10px;
+}
+/**/
+footer .footer .row_three,
+footer .footer .row_four{
+    display: flex;
+    flex-direction: column;
+}
+footer .footer .row_three a,
+footer .footer .row_four a{
+    margin: 0 0 15px;
+}
+footer .footer .row_three a:hover,
+footer .footer .row_four a:hover{
+    color: #ffffff;
+}
+/**/
+footer .footer .row_five{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer .row_five a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 0 10px;
+}
+footer .footer .row_five a:hover{
+    color: hsl(198, 60%, 50%);
+    border: 2px solid hsl(198, 60%, 50%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*===================================================
+ Mobile Responsitivity :)
+===================================================*/
+@media screen and (max-width: 600px){
+    header{
+        padding: 20px 10px 70px;
+    }
+    header:after{
+        background-image: url(images/bg-curvy-mobile.svg);
+        background-size: cover;
+    }
+    header .nav_bar .links a{
+        margin: 0 10px;
+    }
+    header .header img{
+        width: 90%;
+    }
+    header .header h1{
+        width: 100%;
+        font-size: 35px;
+    }
+    header .header .sub_title{
+        width: 90%;
+    }
+    /**/
+    section{
+        padding: 0 10px 50px;
+    }
+    /**/
+    section .about_us{
+        flex-direction: column;
+    }
+    section .about_us .about h2{
+        width: 100%;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    section .about_us .img,
+    section .about_us .about{
+        width: 100%;
+    }
+    /**/
+    section .comment{
+        flex-direction: column;
+    }
+    section .comment .card{
+        width: 100%;
+        margin: 10px 0;
+    }
+    /**/
+    section .signup_conn{
+        width: 100%;
+        position: relative;
+        margin-bottom: -120px;
+    }
+    section .signup{
+        width: 100%;
+        padding: 20px;
+    }
+    section .signup h2{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    section .signup form input[type="text"],
+    section .signup form input[type="submit"]{
+        width: 100%;
+    }
+    /**/
+    footer .footer{
+        flex-direction: column;
+    }
+    
+}
+
